@@ -8,26 +8,7 @@ var chalk = require('chalk');
 var mkdirp = require('mkdirp');
 var _s = require('underscore.string');
 
-module.exports = yeoman.Base.extend({
-    prompting: function () {
-      var done = this.async();
-
-      // Have Yeoman greet the user.
-      this.log(yosay(
-        'Welcome to ' + chalk.red('Angular semantic app') + ' generator!'
-      ));
-
-      var prompts = [{
-        name: 'name',
-        message: 'What are you calling your app?',
-        store: true,
-        default : this.appname // Default to current folder name
-      }];
-
-      this.prompt(prompts, function (props) {
-        this.appName = props.name;
-      }.bind(this));
-    },
+module.exports = yeoman.generators.Base.extend({
     constructor: function() {
         yeoman.generators.Base.apply(this, arguments);
 
@@ -43,22 +24,21 @@ module.exports = yeoman.Base.extend({
 
     writing: {
         gulpfile: function() {
-            mkdirp(this.appName);
             this.fs.copyTpl(
                 this.templatePath('gulpfile.js'),
-                this.destinationPath(this.appName+'/gulpfile.js')
+                this.destinationPath('gulpfile.js')
             );
         },
 
         packageJSON: function() {
             this.fs.copyTpl(
                 this.templatePath('_package.json'),
-                this.destinationPath(this.appName+ '/package.json')
+                this.destinationPath('package.json')
             );
         },
 
         git: function() {
-            this.copy('gitignore', this.appName'+/.gitignore');
+            this.copy('gitignore', '.gitignore');
         },
 
         bower: function() {
@@ -74,26 +54,27 @@ module.exports = yeoman.Base.extend({
                 }
             };
 
-            this.fs.writeJSON('bower.json', this.appName +'/'+ bower);
+            this.fs.writeJSON('bower.json', bower);
             this.fs.copy(
                 this.templatePath('bowerrc'),
-                this.destinationPath(this.appName+'/.bowerrc')
+                this.destinationPath('.bowerrc')
             );
         },
 
         jshint: function() {
-            this.copy('eslintrc', this.appName + '.eslintrc');
+            this.copy('eslintrc.json', '.eslintrc.json');
         },
 
-        assets: function() {
-            this.copy('assets/', this.appName + 'assets/');
-        },
 
         writeIndex: function() {
             this.fs.copyTpl(
                 this.templatePath('index.html'),
-                this.destinationPath(this.appName + 'index.html')
+                this.destinationPath('index.html')
             );
+        },
+
+        app: function() {
+            this.directory('assets', 'assets');
         }
     },
 
