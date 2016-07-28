@@ -1,0 +1,12 @@
+.wireframe.image {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+.main.ui.container {
+    position: relative;
+    width: 700px !important;
+    left: 0px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}

@@ -1,0 +1,35 @@
+{
+	"name": "generator-ng-semantic-seed",
+	"version": "0.0.1",
+	"description": "A yeoman generator for frontend webapp with angular and semantic ui",
+	"license": "MIT",
+	"repository": "shreedharshetty/generator-ng-semantic-seed",
+	"author": "Shreedhar shetty",
+	"main": "app/index.js",
+	"engines": {
+		"node": ">=4.2.1",
+		"npm": ">=2.14.7"
+	},
+	"files": [
+		"app"
+	],
+	"keywords": [
+		"yeoman-generator",
+		"webapp",
+		"angular",
+		"semantic-ui",
+		"protractor",
+		"gulp"
+	],
+	"dependencies": {
+		"chalk": "1.1.1",
+		"cheerio": "0.19.0",
+		"mkdirp": "^0.5.1",
+		"underscore.string": "3.2.2",
+		"yeoman-generator": "0.21.1",
+		"yosay": "1.0.5",
+		"yo": "1.4.8",
+		"generator-mocha": "0.2.0",
+		"gulp": "3.9.0"
+	}
+}

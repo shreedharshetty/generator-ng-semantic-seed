@@ -1,0 +1,52 @@
+<div class="ui segment grid centered" ng-controller="sectionCtrl">
+	<div class="row">
+		<div class="pusher">
+			<sm-sidebar class="inverted vertical labeled icon menu sidebar1" items="icons" label="item.label" on-click="item.click()"></sm-sidebar>
+		</div>
+		<sm-button class="teal" sm-sidebar-toggle="'.sidebar1'">Toggle</sm-button>
+		<sm-button sm-modal-show="'.modal0'" class="teal">Show modal</sm-button>
+		<sm-modal class="modal0" on-approve="approved" on-deny="denied">
+		  <div class="header">
+		    Profile Picture
+		  </div>
+		  <div class="image content">
+		    <div class="ui medium image">
+		      <img src="http://semantic-ui.com/images/avatar/large/chris.jpg">
+		    </div>
+		    <div class="description">
+		      <div class="ui header">We've auto-chosen a profile image for you.</div>
+		      <p>We've grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>
+		      <p>Is it okay to use this photo?</p>
+		    </div>
+		  </div>
+		  <div class="actions">
+		    <div class="ui black deny button">
+		      Nope
+		    </div>
+		    <div class="ui positive right labeled icon button">
+		      Yep, that's me
+		      <i class="checkmark icon"></i>
+		    </div>
+		  </div>
+		</sm-modal>
+	</div>
+	
+	<h4>Tabs</h4>
+	<div class="row">
+		<div data-copy-to="#example3">
+			<sm-tab-menu tabs="{first3:'First', second3:'Second', third3:'Third'}" active="'first3'" class="pointing secondary"></sm-tab-menu>
+			<sm-tab name="first3">
+				<img class="ui wireframe image" src="http://semantic-ui.com/images/wireframe/paragraph.png">
+			</sm-tab>
+			<sm-tab name="second3">
+				<img class="ui wireframe image" src="http://semantic-ui.com/images/wireframe/paragraph.png"><br>
+				<img class="ui wireframe image" src="http://semantic-ui.com/images/wireframe/paragraph.png">
+			</sm-tab>
+			<sm-tab name="third3">
+				<img class="ui wireframe image" src="http://semantic-ui.com/images/wireframe/paragraph.png"><br>
+				<img class="ui wireframe image" src="http://semantic-ui.com/images/wireframe/paragraph.png"><br>
+				<img class="ui wireframe image" src="http://semantic-ui.com/images/wireframe/paragraph.png">
+			</sm-tab>
+		</div>
+	</div>
+</div>

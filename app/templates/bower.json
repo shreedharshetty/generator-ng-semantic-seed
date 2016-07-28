@@ -1,0 +1,33 @@
+{
+    "name": "ng-semantic",
+    "description": "Angular semantic-ui app",
+    "main": "index.html",
+    "authors": [
+        "Shreedhar shetty <shreedhar888@gmail.com>"
+    ],
+    "license": "MIT",
+    "keywords": [
+        "yeoman-generator",
+        "webapp",
+        "angular",
+        "semantic-ui",
+        "protractor",
+        "gulp",
+        "bower"
+    ],
+    "homepage": "",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "angular": "1.5.8",
+        "jquery": "3.1.0",
+        "semantic": "2.2.2",
+        "angular-ui-router": "0.3.1",
+        "semantic-ui-angular-jquery": "0.1.1"
+    }
+}
