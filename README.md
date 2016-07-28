@@ -15,8 +15,9 @@
 
 ```shell
 npm install -g gulp bower yo generator-ng-semantic-seed
+mkdir <appname>
+cd into  <appname>
 yo ng-semantic-seed
-cd into your <app>
 bower install
 npm install
 ```
