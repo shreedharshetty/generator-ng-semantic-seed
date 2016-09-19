@@ -1,0 +1,6 @@
+{
+  "name": "Generator-ng-semantic-seed",
+  "tagline": "Yeoman generator for ng-semantic-seed",
+  "body": "[Gulp](http://gulpjs.com/) + [AngularJs](https://angularjs.org/) + [Angular-Semantic-UI](https://github.com/ClickerMonkey/SemanticUI-Angular)\r\n==============================\r\n\r\n> [Yeoman](http://yeoman.io) generator for beautiful and responsive webapp\r\n\r\n## Features\r\n\r\n* Gulp tasks to \r\n\t* Linting all js using [ESlint](http://eslint.org/)\r\n\t* Minify html, js and css for production servers\r\n\r\n## Getting Started\r\n\r\n### Creating\r\n\r\n```shell\r\nnpm install -g gulp bower yo generator-ng-semantic-seed\r\nmkdir <appname>\r\ncd into  <appname>\r\nyo ng-semantic-seed\r\nbower install\r\nnpm install\r\n```\r\n\r\n## License\r\n\r\n[MIT license](http://opensource.org/licenses/MIT)\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
